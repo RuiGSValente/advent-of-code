@@ -10,22 +10,22 @@ object TobogganTrajectoryUtils {
                   numberOfTrees: Int,
                   config: ConfigVals): Int = {
 
+    val nextListOfStrings: Seq[String] =
+      listString.takeRight(listString.length - config.downMoves)
+
+    val nextPosition: Int = (position + config.rightMoves) % config.sizeString
+
     if (listString.nonEmpty)
       listString.head(position) match {
         case '#' =>
           splitString(
-            listString.takeRight(listString.length - config.downMoves),
-            (position + config.rightMoves) % config.sizeString,
+            nextListOfStrings,
+            nextPosition,
             numberOfTrees + 1,
             config
           )
         case _ =>
-          splitString(
-            listString.takeRight(listString.length - config.downMoves),
-            (position + config.rightMoves) % config.sizeString,
-            numberOfTrees,
-            config
-          )
+          splitString(nextListOfStrings, nextPosition, numberOfTrees, config)
       } else numberOfTrees
   }
 
