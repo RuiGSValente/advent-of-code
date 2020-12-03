@@ -7,7 +7,7 @@ object PasswordPhilosophy extends App {
 
   val listOfNumbers: Seq[String] = readFromResources("02_12_2020.txt")
 
-  println(countValidPasswordPart1(listOfNumbers))
-  println(countValidPasswordPart2(listOfNumbers))
+  println("Result part 1 day 2: " + countValidPasswordPart1(listOfNumbers))
+  println("Result part 2 day 2: " + countValidPasswordPart2(listOfNumbers))
 
 }
