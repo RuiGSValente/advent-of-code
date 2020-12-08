@@ -21,7 +21,7 @@ object HandyHaversacks extends App {
    */
   println(
     "Result part 2 day 7: " +
-      bagCalulator(
+      bagCalculator(
         readBagsSpecifications(listOfPath),
         Seq(("shiny gold", 1)),
         -1

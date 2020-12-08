@@ -54,9 +54,9 @@ object HandyHaversacksUtils {
   }
 
   @scala.annotation.tailrec
-  def bagCalulator(seqBags: Seq[Bag],
-                   bagsInside: Seq[(String, Int)],
-                   acc: Int): Int = {
+  def bagCalculator(seqBags: Seq[Bag],
+                    bagsInside: Seq[(String, Int)],
+                    acc: Int): Int = {
 
     val bagContains: Seq[(String, Int)] =
       bagsInside.flatMap {
@@ -74,7 +74,7 @@ object HandyHaversacksUtils {
     val accUpdated: Int = acc + bagsInside.map(_._2).sum
 
     if (bagContains.nonEmpty)
-      bagCalulator(seqBags, bagContains, accUpdated)
+      bagCalculator(seqBags, bagContains, accUpdated)
     else
       accUpdated
 
