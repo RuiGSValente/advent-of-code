@@ -63,8 +63,10 @@ object HandheldHaltingUtils {
         val (newCalcIndex, newCalcAcc): (Seq[Int], Int) =
           accumulatorCalculator(newInstr, Seq(0), 0)
 
-        if (newCalcIndex.last + 1 == instructions.length) newCalcAcc
-        else accumulatorCalculator2(instructions, indexSeq.dropRight(1))
+        if (newCalcIndex.last + 1 == instructions.length)
+          newCalcAcc
+        else
+          accumulatorCalculator2(instructions, indexSeq.dropRight(1))
 
       case _ => accumulatorCalculator2(instructions, indexSeq.dropRight(1))
     }
