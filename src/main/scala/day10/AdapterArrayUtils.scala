@@ -22,9 +22,12 @@ object AdapterArrayUtils {
   @scala.annotation.tailrec
   def mapRecursive(seqSortedInt: Seq[(Int, Long)]): Long = {
 
-    if (seqSortedInt.tail.isEmpty) seqSortedInt.head._2
+    if (seqSortedInt.tail.isEmpty)
+      seqSortedInt.head._2
     else {
+
       val (minorValue: Int, minorValueCount: Long) = seqSortedInt.head
+
       val addValueToFiltered: Seq[(Int, Long)] = seqSortedInt
         .filter { case (value, _) => (value - minorValue) <= 3 }
         .map { case (valueFiltered, _) => (valueFiltered, minorValueCount) }
