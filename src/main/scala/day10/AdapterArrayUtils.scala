@@ -2,6 +2,7 @@ package day10
 
 object AdapterArrayUtils {
 
+  //Part 1
   @scala.annotation.tailrec
   def subtractToNext(seqInt: Seq[Int], seqDifferences: Seq[Int]): Seq[Int] = {
     if (seqInt.size > 1) {
@@ -19,6 +20,7 @@ object AdapterArrayUtils {
       .toMap
   }
 
+  //Part 2
   @scala.annotation.tailrec
   def mapRecursive(seqSortedInt: Seq[(Int, Long)]): Long = {
 
