@@ -14,11 +14,11 @@ object AdapterArray extends App {
     .map(_ + 1)
     .getOrElse(0) * listOfSubtractions.get(3).map(_ + 1).getOrElse(0)
 
-  println("Result part 1 day 9: " + resultSubtractions)
+  println("Result part 1 day 10: " + resultSubtractions)
 
   val listTuple: Seq[(Int, Long)] = (0, 1L) +: listOfPath.sorted.map { x =>
     (x, 0L)
   }
 
-  println("Result part 2 day 9: " + mapRecursive(listTuple))
+  println("Result part 2 day 10: " + mapRecursive(listTuple))
 }
