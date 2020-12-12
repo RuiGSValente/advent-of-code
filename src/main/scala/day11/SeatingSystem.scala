@@ -14,7 +14,7 @@ object SeatingSystem extends App {
       .toSeq
       .sum
 
-  println("Result part 1 day 10: " + resultOccupiedSeats)
+  println("Result part 1 day 11: " + resultOccupiedSeats)
 
   val visibleOccupiedSeats =
     visibleSeatCalculator(listOfPath, 5, firstPart = false)
@@ -22,6 +22,6 @@ object SeatingSystem extends App {
       .toSeq
       .sum
 
-  println("Result part 2 day 10: " + visibleOccupiedSeats)
+  println("Result part 2 day 11: " + visibleOccupiedSeats)
 
 }

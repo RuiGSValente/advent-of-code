@@ -28,4 +28,5 @@ object ReadUtils {
 
     splitBlank(Seq(), seqStr, Seq())
   }
+
 }
