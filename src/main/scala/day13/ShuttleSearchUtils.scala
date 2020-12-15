@@ -1,6 +1,6 @@
 package day13
 
-object ShutteSearchUtils {
+object ShuttleSearchUtils {
 
   case class ShuttleParameters(timestamp: Int, busIds: Seq[(Long, Long)])
 

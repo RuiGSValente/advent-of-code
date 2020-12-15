@@ -1,6 +1,6 @@
 package day13
 
-import day13.ShutteSearchUtils._
+import day13.ShuttleSearchUtils._
 import utils.ReadUtils._
 
 object ShuttleSearch extends App {
