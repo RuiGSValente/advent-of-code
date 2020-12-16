@@ -10,9 +10,7 @@ object RambunctiousRecitationUtils {
 
     if (length == threshold) lastValue
     else {
-
       val lastWithoutLast: Option[Int] = mapNumbers.get(lastValue)
-
       val newMap: Map[Int, Int] = mapNumbers ++ Map(lastValue -> length)
 
       if (lastWithoutLast.isEmpty)
@@ -26,5 +24,4 @@ object RambunctiousRecitationUtils {
         )
     }
   }
-
 }
